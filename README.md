@@ -4,6 +4,8 @@ A simple command line utility to browse trecord binary files. I was motivated by
 format. Normally one would have to write a one-off python script to read through your file. This project aims to reduce
 the lines of code you need to write.
 
+![Usage](demo/usage.gif)
+
 Prerequisites
 ===
 This project doesn't install tensorflow, rather it assumes it's already there since you may have the cpu or gpu version installed

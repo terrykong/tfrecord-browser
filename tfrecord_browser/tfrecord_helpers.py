@@ -136,7 +136,10 @@ class tfrecord_iterator:
                 result[k] = v.float_list.value
             elif v.bytes_list.value:
                 #result[k] = v.bytes_list.value
-                result[k] = tf.io.parse_tensor(v.bytes_list.value[0],tf.float32)
+                try:
+                    result[k] = tf.io.parse_tensor(v.bytes_list.value[0],tf.float32)
+                except:
+                    result[k] = v.bytes_list.value
             else:
                 raise ValueError('Unrecognized type')
         return result, None
