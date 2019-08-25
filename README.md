@@ -36,4 +36,3 @@ TODOs
 + Add support for skipping/jumping
 + Add to PyPi
 + Currently only supports tf.train.Example, but need to also support for tf.train.SequenceExample
-+ Currently assumes that bytes_list features are actually serialized tensors, but that's a pretty rigid assumption
