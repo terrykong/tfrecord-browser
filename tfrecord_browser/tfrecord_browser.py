@@ -71,13 +71,18 @@ class UpDownTreeBox(urwidtrees.widgets.TreeBox):
     def keypress(self, size, key):
         cols, rows = size
         if key == 'r':
+            # TODO: should add nodes to tree if num nodes < size of screen
             self.refresh()
         elif key == 'down':
+            if self.treelist[1] and self.index < len(self.treelist[1]):
+                # Don't need to add nodes if we've scrolled up
+                continue
             self.add_node_to_tree()
             self.refresh()
             self.index += 1
         elif key == 'up':
-            self.index -= 1
+            if self.index > 1:
+                self.index -= 1
         focus = self.get_focus()[1]
             
         return super(UpDownTreeBox, self).keypress(size,key)
