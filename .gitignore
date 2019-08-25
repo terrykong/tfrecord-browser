@@ -1,0 +1,5 @@
+.eggs/
+build/
+dist/
+**/__pycache__
+tfrecord_browser.egg-info/
