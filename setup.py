@@ -10,7 +10,8 @@ setup(
     scripts=['bin/tfrecord-browser'],
     packages=find_packages(),
     include_package_data=True,
-    install_requires=["urwid", "urwidtrees", "tensorflow==2.0.0-rc0"],
+    # Shouldn't include tensorflow here
+    install_requires=["urwid", "urwidtrees"],
     #setup_requires=["pytest-runner"],
     #tests_require=["pytest"],
     version=__version__,
