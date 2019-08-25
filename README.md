@@ -2,7 +2,7 @@ TFRecord Browser
 ===
 A simple command line utility to browse trecord binary files. I was motivated by the lack of support for reading this file
 format. Normally one would have to write a one-off python script to read through your file. This project aims to reduce
-the amount of work 
+the lines of code you need to write.
 
 Prerequisites
 ===
